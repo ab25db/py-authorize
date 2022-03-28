@@ -317,7 +317,7 @@ class TransactionBaseSchema(colander.MappingSchema):
     duty = AmountItemSchema(missing=colander.drop)
     shipping_and_handling = AmountItemSchema(missing=colander.drop)
     amount = colander.SchemaNode(colander.Decimal('0.01'),
-                                 validator=colander.Range(0, 20000),
+                                 validator=colander.Range(0, 35000),
                                  required=True)
     currency_code = colander.SchemaNode(colander.String(),
                                         missing=colander.drop)
